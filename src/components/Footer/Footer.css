@@ -1,20 +1,35 @@
 .Footer-container {
     position: relative;
-    height: 280px;
+
+
 }
 
 .Footer-container>hr {
     border: 1px solid var(--lightgray);
 }
 
+.sub-footer {
+    display: flex;
+    gap: 50rem;
+}
+
 .footer {
-    padding: 1rem 2rem;
+
+    padding: 2rem 2rem 1rem 2rem;
     display: flex;
     flex-direction: column;
     gap: 4rem;
     align-items: center;
     justify-content: center;
-    height: 20rem;
+
+}
+
+.right-footer {
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    align-items: center;
+
 }
 
 .social-links {
@@ -27,6 +42,8 @@
     height: 2rem;
     cursor: pointer;
 }
+
+
 
 .logo-f>img {
     width: 10rem;
@@ -48,4 +65,13 @@
     height: 12rem;
     filter: blur(200px);
     background: rgb(255, 155, 0);
+}
+
+.footerimg {
+    transition: 0.3s;
+}
+
+.footerimg:hover {
+    transform: scale(1.04);
+
 }

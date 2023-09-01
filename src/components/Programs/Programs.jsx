@@ -1,12 +1,18 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Programs.css";
 import { programsData } from "../../data/programsData";
-import RightArrow from "../../assets/rightArrow.png"
+import RightArrow from "../../assets/rightArrow.png";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const Programs = () => {
+	useEffect(() => {
+		Aos.init({ duration: 2000, once: "True" });
+	}, []);
 	return (
 		<>
-			<div className="Programs" id="programs">
+			<div data-aos="fade-up" className="Programs" id="programs">
+		
 				<div className="programs-header">
 					<span className="stroke-text">Explore our</span>
 					<span>Programs</span>

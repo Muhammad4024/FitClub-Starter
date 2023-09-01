@@ -1,9 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Plans.css";
 import { plansData } from "../../data/plansData";
 import whiteTick from "../../assets/whiteTick.png";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 const Plans = () => {
+	useEffect(() => {
+		Aos.init({ duration: 2000, once: "True" });
+	}, []);
 	return (
 		<div className="plans-container">
 			<div className="blur plans-blur-1"></div>
@@ -14,7 +19,7 @@ const Plans = () => {
 				<span>YOUR JOURNEY</span>
 				<span className="stroke-text">NOW WITHUS</span>
 			</div>
-			<div className="plans">
+			<div data-aos="zoom-in" data-aos-duration="1000" className="plans">
 				{plansData.map((plan, i) => (
 					<div className="plan" key={i}>
 						{plan.icon}

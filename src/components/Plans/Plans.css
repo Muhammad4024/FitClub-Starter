@@ -1,13 +1,14 @@
 .plans-container {
-    height: 700px;
+
     display: flex;
-    margin-top: -4rem;
+    margin-top: 5rem;
     padding: 0 2rem;
     flex-direction: column;
     position: relative;
 }
 
 .plans {
+
     display: flex;
     align-items: center;
     justify-content: center;
@@ -101,7 +102,21 @@
     right: 0rem;
 }
 
+.j-btn {
+    background: white;
+}
+
 .j-btn:hover {
     color: var(--orange);
 }
 
+
+@media screen and (max-width: 768px) {
+    .plans {
+        flex-direction: column;
+    }
+
+    .plans>:nth-child(2) {
+        transform: none;
+    }
+}

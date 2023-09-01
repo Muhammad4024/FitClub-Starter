@@ -1,11 +1,14 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import "./Join.css";
 import emailjs from "@emailjs/browser";
-
+import Aos from "aos";
+import "aos/dist/aos.css";
 const Join = () => {
 	const form = useRef();
 	const [emailSent, setEmailSent] = useState(false);
-
+	useEffect(() => {
+		Aos.init({ duration: 2000, once: "True" });
+	}, []);
 	const sendEmail = (e) => {
 		e.preventDefault();
 
@@ -35,7 +38,7 @@ const Join = () => {
 	return (
 		<>
 			{" "}
-			<div className="Join" id="join-us">
+			<div data-aos="fade-in" className="Join" id="join-us">
 				<div className="left-j">
 					<hr />
 					<div>
@@ -53,7 +56,7 @@ const Join = () => {
 							type="email"
 							name="user_email"
 							placeholder="Enter Your Email Address"
-						/>	
+						/>
 						<button className="btn btn-j">Join Now</button>
 					</form>
 				</div>
